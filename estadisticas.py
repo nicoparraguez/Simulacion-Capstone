@@ -1,8 +1,19 @@
-from random import randint
-import numpy as np
+from simulacion import *
+from statistics import mean , stdev
 
-a = randint(*(0,2))
-print(a)
 
-b = np.random.poisson(50.4)
-print(b)
+gastos = list()
+def estadisticas_globales(n):
+	for i in range(n):
+		simulacion = Hospitaland(30,i)
+		simulacion.run()
+		gastos.append(simulacion.gasto)
+		print(simulacion.gasto)
+	print(stdev(estadisticas))
+
+
+if __name__ == '__main__':
+	estadisticas_globales(100)
+
+
+

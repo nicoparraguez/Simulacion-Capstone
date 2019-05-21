@@ -19,10 +19,11 @@ class Hospitaland:
 
 
 
-	def __init__(self,limite):
+	def __init__(self,limite,iteracion):
 		self.eventos = []
 		self.metodos = {"comenzar_dia":self.comenzar_dia, "terminar_primera_operacion":self.terminar_primera_operacion,"terminar_dia" : self.terminar_dia }
 		self.limite = limite
+		self.iteracion = iteracion
 		self.dia = 1
 		self.tiempo_actual = 0
 		self.tiempo_maximo = 720
@@ -362,11 +363,11 @@ class Hospitaland:
 
 
 
-if __name__ == '__main__':
-	a = Hospitaland(30)
-	a.run()
-	print(a.gasto,a.privado,a.operado,a.esperando)
-	print(a.privado_dic)
+#if __name__ == '__main__':
+	#a = Hospitaland(30,2)
+	#a.run()
+	#print(a.gasto,a.privado,a.operado,a.esperando)
+	#print(a.privado_dic)
 
 
 
